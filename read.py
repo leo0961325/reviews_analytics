@@ -18,7 +18,7 @@ print(data[0]) #第幾筆
 
 sum_len = 0
 for d in data :
-    sum_len += len(d)
+    sum_len += len(d) #len(d) 是字數
 print("平均是" , sum_len / len(data) , "每一筆") #平均每一筆留言字數
 
 #-------------------------------------------------------------------------------------+
@@ -28,3 +28,14 @@ for d in data :
     if len(d) < 100 :
         new.append(d)
 print("共有" , len(new) , "小於100字數的留言")  #每一個小於100的留言
+
+
+#-------------------------------------------------------------------------------------+
+
+valuable = []
+
+for d in data :
+    if "valuable" in d :
+        valuable.append(d)
+print("一共有 ", len(valuable) ,"個留言提到valuable")
+print(valuable[1]) #找出其中一個提到valuable的留言
