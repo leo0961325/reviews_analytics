@@ -41,3 +41,9 @@ for d in data :
         valuable.append(d)
 print("一共有 ", len(valuable) ,"個留言提到valuable")
 print(valuable[1]) #找出其中一個提到valuable的留言
+
+#-------------------------------------------------------------------------------------+
+
+amazon = [d for d in data if "amazon" in d]
+print(len(amazon))
+
