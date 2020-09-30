@@ -2,16 +2,18 @@
 #2.查字典共有幾次
 #3.所選單字出現幾次(簡易)
 #4.字典查閱功能
-
+import progressbar
 
 data = [] 
 count = 0
+bar = progressbar.ProgressBar(max_value = 1000000) #最多1000000筆
+
 with open('reviews.txt' , 'r') as f :
     for line in f :
         data.append(line)
         count += 1
-        if count % 1000 == 0 :
-            print(len(data))
+        bar.update(count)
+print('共有' , len(data))
 
 
 
